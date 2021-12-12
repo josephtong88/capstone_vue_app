@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <h1>Hello from Template</h1>
+  <div class="Teams">
+        <h1>{{ team.team_name }} </h1>
     <div
       v-for="score in scores" v-bind:key="score.id">
       <p>Date: {{ score.date }}</p>
@@ -13,6 +13,7 @@
       <p>Did the home team cover? {{ score.home_team_cover }}</p>
       <p>Did the away team cover? {{ score.away_team_cover }}</p>
       <hr>
+      
     </div>
   </div>
 </template>
@@ -25,18 +26,27 @@ export default {
   data: function () {
     return {
       scores: [],
+      message: "Hello from Script (JS)",
+      team: {},
     };
   },
   created: function () {
     this.indexscores();
+    this.showteam();
   },
   methods: {
     indexscores: function () {
-      axios.get("/scores").then((response) => {
+      axios.get("/teams/" + this.$route.params.id).then((response) => {
         console.log("scores index", response);
         this.scores = response.data;
       });
     },
+    showteam: function (){
+      axios.get("/showteams/" + this.$route.params.id).then((response) => {
+        console.log("Team Name", response);
+        this.team = response.data;
+      });
+    }
   },
 };
 </script>
