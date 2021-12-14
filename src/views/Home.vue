@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Hello from Template</h1>
+    <h1>Scores Index</h1>
     <div
       v-for="score in scores" v-bind:key="score.id">
       <p>Date: {{ score.date }}</p>
