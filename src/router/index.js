@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Team from "../views/teams.vue";
 import Create from "../views/Create.vue";
+import Scores from "../views/Scores.vue";
 
 
 
@@ -10,9 +11,9 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home,
+    path: "/scores",
+    name: "Score",
+    component: Scores,
   },
   {
     path: "/teams/:id",
@@ -23,6 +24,11 @@ const routes = [
     path: "/create",
     name: "Create",
     component: Create,
+  },
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
   },
 
 

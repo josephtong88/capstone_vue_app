@@ -1,17 +1,18 @@
 <template>
-  <div class="Teams">
-    <h1>{{ team.team_name }}</h1>
-    <div v-for="score in scores" v-bind:key="score.id">
+  <div class="Score">
+    <h1>Scores Index</h1>
+    <div
+      v-for="score in scores" v-bind:key="score.id">
       <p>Date: {{ score.date }}</p>
       <p>Home Team: {{ score.home_team }}</p>
       <p>Away Team: {{ score.away_team }}</p>
       <p>Home Score: {{ score.home_score }}</p>
       <p>Away Score: {{ score.away_score }}</p>
       <p>Home Spread: {{ score.closing_spread_home }}</p>
-      <p>Away Spread: {{ score.closing_spread_away }}</p>
+      <p>Away SPread: {{ score.closing_spread_away }}</p>
       <p>Did the home team cover? {{ score.home_team_cover }}</p>
       <p>Did the away team cover? {{ score.away_team_cover }}</p>
-      <hr />
+      <hr>
     </div>
   </div>
 </template>
@@ -24,25 +25,16 @@ export default {
   data: function () {
     return {
       scores: [],
-      message: "Hello from Script (JS)",
-      team: {},
     };
   },
   created: function () {
     this.indexscores();
-    this.showteam();
   },
   methods: {
     indexscores: function () {
-      axios.get("/teams/" + this.$route.params.id).then((response) => {
+      axios.get("/scores").then((response) => {
         console.log("scores index", response);
         this.scores = response.data;
-      });
-    },
-    showteam: function () {
-      axios.get("/showteams/" + this.$route.params.id).then((response) => {
-        console.log("Team Name", response);
-        this.team = response.data;
       });
     },
   },
