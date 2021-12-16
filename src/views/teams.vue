@@ -1,18 +1,17 @@
 <template>
   <div class="Teams">
     <h1>{{ team.team_name }}</h1>
-
+<p> Select date parameters if required between:</p>
     <p><input type="text" v-model="start_date"> start date </p>
     <p><input type="text" v-model="end_date"> end date </p>
-    <button v-on:click="indexscores" > click </button>
+    <button v-on:click="datedindexscores" > Submit </button>
     <div v-for="score in scores" v-bind:key="score.id">
       <p>Date: {{ score.date }}</p>
-      <p>Home Team: {{ score.home_team }}</p>
-      <p>Away Team: {{ score.away_team }}</p>
-      <p>Home Score: {{ score.home_score }}</p>
-      <p>Away Score: {{ score.away_score }}</p>
-      <p>Home Spread: {{ score.closing_spread_home }}</p>
-      <p>Away Spread: {{ score.closing_spread_away }}</p>
+      <p>Home Team: {{ score.home_team }} ({{ score.closing_spread_home }})</p>
+      <p>Away Team: {{ score.away_team }} ({{ score.closing_spread_away }})</p>
+      <p></p>
+      <p>Final Score: {{ score.home_team }}: {{ score.home_score }} to {{ score.away_team }}: {{ score.away_score }}. </p>
+     
       <p>Did the home team cover? {{ score.home_team_cover }}</p>
       <p>Did the away team cover? {{ score.away_team_cover }}</p>
       <hr />
@@ -40,7 +39,13 @@ export default {
   },
   methods: {
     indexscores: function () {
-      axios.get(`/teams/${this.$route.params.id}?start_date=${this.start_date}&end_date=${this.end_date}`).then((response) => {
+      axios.get(`/teams/${this.$route.params.id}`).then((response) => {
+        console.log("scores index", response);
+        this.scores = response.data;
+      });
+    },
+    datedindexscores: function () {
+      axios.get(`/datedteams/${this.$route.params.id}?start_date=${this.start_date}&end_date=${this.end_date}`).then((response) => {
         console.log("scores index", response);
         this.scores = response.data;
       });
