@@ -1,6 +1,10 @@
 <template>
   <div class="Teams">
     <h1>{{ team.team_name }}</h1>
+
+    <p><input type="text" v-model="start_date"> start date </p>
+    <p><input type="text" v-model="end_date"> end date </p>
+    <button v-on:click="indexscores" > click </button>
     <div v-for="score in scores" v-bind:key="score.id">
       <p>Date: {{ score.date }}</p>
       <p>Home Team: {{ score.home_team }}</p>
@@ -26,6 +30,8 @@ export default {
       scores: [],
       message: "Hello from Script (JS)",
       team: {},
+      start_date: "",
+      end_date: ""
     };
   },
   created: function () {
@@ -34,7 +40,7 @@ export default {
   },
   methods: {
     indexscores: function () {
-      axios.get("/teams/" + this.$route.params.id).then((response) => {
+      axios.get(`/teams/${this.$route.params.id}?start_date=${this.start_date}&end_date=${this.end_date}`).then((response) => {
         console.log("scores index", response);
         this.scores = response.data;
       });

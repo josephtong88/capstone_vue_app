@@ -9,7 +9,7 @@
       <p>Home Score: {{ score.home_score }}</p>
       <p>Away Score: {{ score.away_score }}</p>
       <p>Home Spread: {{ score.closing_spread_home }}</p>
-      <p>Away SPread: {{ score.closing_spread_away }}</p>
+      <p>Away Spread: {{ score.closing_spread_away }}</p>
       <p>Did the home team cover? {{ score.home_team_cover }}</p>
       <p>Did the away team cover? {{ score.away_team_cover }}</p>
       <hr>
@@ -37,6 +37,7 @@ export default {
         this.scores = response.data;
       });
     },
+    
   },
 };
 </script>
