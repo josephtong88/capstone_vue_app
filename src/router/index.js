@@ -26,7 +26,7 @@ const routes = [
     component: Create,
   },
   {
-    path: "/",
+    path: "/home",
     name: "Home",
     component: Home,
   },

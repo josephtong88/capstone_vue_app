@@ -1,34 +1,54 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <router-view />
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/img/logo.png" alt="" class="img-fluid"
+          /></a>
+        </div>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><router-link to="/home">Home</router-link></li>
+            <li><router-link to="/scores">Scores</router-link></li>
+            <li><router-link to="/create">Create</router-link></li>
+           
+          </ul>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <a href="#header" class="scrollto footer-logo"
+                ><img src="assets/img/hero-logo.png" alt=""
+              /></a>
+              <h3>Knight</h3>
+              <p>
+                Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
+                eligendi fuga maxime saepe commodi placeat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+         </footer>
+    <!-- End Footer -->
+  </div>
+</template>
+
+<style></style>
+<div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/create">Create</router-link> |
        <router-link to="/scores">Scores</router-link> 
       
     </div>
-    <router-view />
-  </div>
-</template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
