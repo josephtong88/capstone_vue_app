@@ -83,7 +83,7 @@ export default {
       });
     },
     datedindexscores: function () {
-      axios.get(`/datedteams/${this.$route.params.id}?start_date=${this.start_date}&end_date=${this.end_date}`).then((response) => {
+      axios.get(`/datedteams/${this.$route.params.id}?start_date=${this.start_date}&end_date=${this.end_date}&opp=${this.opp}`).then((response) => {
         console.log("scores index", response);
         this.scores = response.data;
       });
