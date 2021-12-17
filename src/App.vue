@@ -12,8 +12,6 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><router-link to="/home">Home</router-link></li>
-            <li><router-link to="/scores">Scores</router-link></li>
-            <li><router-link to="/create">Create</router-link></li>
            
           </ul>
         </nav>

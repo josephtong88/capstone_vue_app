@@ -83,6 +83,7 @@
         <option>Los Angeles Rams</option>
       </select>
     </div>
+    <p></p><p></p>
      <p>Home Score: <input type="text" v-model="newScore.home_score" /></p>
     <p>Away Score: <input type="text" v-model="newScore.away_score" /></p>
     <p>

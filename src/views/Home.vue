@@ -4,19 +4,24 @@
     <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
         <div class="logo">
-          <a href="index.html"
+          <a href="/"
             ><img src="assets/img/logo.png" alt="" class="img-fluid"
           /></a>
         </div>
 
+        <!-- .navbar -->
         <nav id="navbar" class="navbar">
           <ul>
             <li><router-link to="/home">Home</router-link></li>
-            <li><router-link to="/scores">Scores</router-link></li>
-            <li><router-link to="/create">Create</router-link></li>
+            <li><a class="nav-link scrollto" href="#about">About Me</a></li>
+            <li>
+              <a class="nav-link scrollto" href="#report_types">Reporting</a>
+            </li>
+            <li><a class="nav-link scrollto" href="#teams">Teams</a></li>
+            <li><a class="nav-link scrollto" href="#create">Create</a></li>
+            <li><router-link to="/scores">Scores Index</router-link></li>
           </ul>
         </nav>
-        <!-- .navbar -->
       </div>
     </header>
     <!-- End Header -->
@@ -39,50 +44,60 @@
               <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3">
                 <h3>The journey of a simple sports enthusiast</h3>
                 <p>
-                  What began as an enjoyable hobby turned into an expensive habit
-                  proffession that, over time, turned back to a hobby.
+                  What began as an enjoyable hobby turned into an expensive
+                  habit proffession that, over time, turned back to a hobby.
                 </p>
-                <p>In watching and researching NFL trends and data, I came to realize: </p>
+                <p>
+                  In watching and researching NFL trends and data, I came to
+                  realize:
+                </p>
                 <ul>
                   <li>
-                    <i class="bx bx-caret-right"></i> Consistent data is hard to come by. Data sources constantly change, formats change, reports change...etc.
+                    <i class="bx bx-caret-right"></i> Consistent data is hard to
+                    come by. Data sources constantly change, formats change,
+                    reports change...etc.
                   </li>
                   <li>
-                    <i class="bx bx-caret-right"></i> Web-based reporting tools are not user friendly. Many require SQL knowledge and prior experience using their database.
+                    <i class="bx bx-caret-right"></i> Web-based reporting tools
+                    are not user friendly. Many require SQL knowledge and prior
+                    experience using their database.
                   </li>
                   <li>
-                    <i class="bx bx-caret-right"></i> Because much of studying trends and reviewing historical scores is related to sports-betting, it is often tied to shadier sites that may contain malicious links.
+                    <i class="bx bx-caret-right"></i> Because much of studying
+                    trends and reviewing historical scores is related to
+                    sports-betting, it is often tied to shadier sites that may
+                    contain malicious links.
                   </li>
                 </ul>
                 <p>
-               What I do here is try to provide a simplified reporting tool that to track how often wins/losses/covers/ties occur with a simplified set of parameters. 
+                  What I do here is try to provide a simplified reporting tool
+                  that to track how often wins/losses/covers/ties occur with a
+                  simplified set of parameters.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <hr>
       <!-- End About Us Section -->
 
       <!-- ======= Services Section ======= -->
-      <section id="services" class="services">
+      <section id="report_types" class="report_types">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
-            <h2>Services</h2>
-            <p>
-              Magnam dolores commodi suscipit eius consequatur ex aliquid fuga
-              eum quidem
-            </p>
+            <h2>Reporting</h2>
+            <p>Keep. It. Simple. Stupid</p>
           </div>
 
           <div class="row">
             <div class="col-lg-6 order-2 order-lg-1">
               <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up">
                 <i class="bx bx-receipt"></i>
-                <h4>Est labore ad</h4>
+                <h4>Data for the last 5+ years</h4>
                 <p>
-                  Consequuntur sunt aut quasi enim aliquam quae harum pariatur
-                  laboris nisi ut aliquip
+                  Scores and spreads for every game and every team since 2014
+                  season.
                 </p>
               </div>
               <div
@@ -91,11 +106,8 @@
                 data-aos-delay="100"
               >
                 <i class="bx bx-cube-alt"></i>
-                <h4>Harum esse qui</h4>
-                <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt
-                </p>
+                <h4>Select by team:</h4>
+                <p>Filter by what team you want to see results for.</p>
               </div>
               <div
                 class="icon-box mt-5"
@@ -103,10 +115,10 @@
                 data-aos-delay="200"
               >
                 <i class="bx bx-images"></i>
-                <h4>Aut occaecati</h4>
+                <h4>Select by date:</h4>
                 <p>
-                  Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut
-                  maiores omnis facere
+                  Select a time frame for whatever team you want to see results
+                  for.
                 </p>
               </div>
               <div
@@ -115,11 +127,8 @@
                 data-aos-delay="300"
               >
                 <i class="bx bx-shield"></i>
-                <h4>Beatae veritatis</h4>
-                <p>
-                  Expedita veritatis consequuntur nihil tempore laudantium vitae
-                  denat pacta
-                </p>
+                <h4>Select specific Oponents</h4>
+                <p>Filter by what oppents you want to see against your team.</p>
               </div>
             </div>
             <div
@@ -131,192 +140,156 @@
           </div>
         </div>
       </section>
+<hr>
       <!-- End Services Section -->
 
-      <!-- ======= Featured Section ======= -->
-      <section id="featured" class="featured">
+      <!-- ======= Teams Selection Section ======= -->
+      <section id="teams" class="teams">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-right">
-              <div class="tab-content">
-                <div class="tab-pane active show" id="tab-1">
-                  <figure>
-                    <img
-                      src="assets/img/featured-1.png"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </figure>
-                </div>
-                <div class="tab-pane" id="tab-2">
-                  <figure>
-                    <img
-                      src="assets/img/featured-2.png"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </figure>
-                </div>
-                <div class="tab-pane" id="tab-3">
-                  <figure>
-                    <img
-                      src="assets/img/featured-3.png"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </figure>
-                </div>
-                <div class="tab-pane" id="tab-4">
-                  <figure>
-                    <img
-                      src="assets/img/featured-4.png"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
-              <ul class="nav nav-tabs flex-column">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active show"
-                    data-bs-toggle="tab"
-                    href="#tab-1"
-                  >
-                    <h4>Modi sit est</h4>
-                    <p>
-                      Quis excepturi porro totam sint earum quo nulla
-                      perspiciatis eius.
-                    </p>
-                  </a>
-                </li>
-                <li class="nav-item mt-2">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-                    <h4>Unde praesentium sed</h4>
-                    <p>Voluptas vel esse repudiandae quo excepturi.</p>
-                  </a>
-                </li>
-                <li class="nav-item mt-2">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-                    <h4>Pariatur explicabo vel</h4>
-                    <p>
-                      Velit veniam ipsa sit nihil blanditiis mollitia natus.
-                    </p>
-                  </a>
-                </li>
-                <li class="nav-item mt-2">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
-                    <h4>Nostrum qui quasi</h4>
-                    <p>
-                      Ratione hic sapiente nostrum doloremque illum nulla
-                      praesentium id
-                    </p>
-                  </a>
-                </li>
-              </ul>
+          <div class="section-title" data-aos="fade-up">
+            <h2>Teams</h2>
+            <p>Select any of the teams below to access all of their games</p>
+          </div>
+
+          <div class="column_wrapper" data-aos="fade-up" data-aos-delay="100">
+            <div v-for="team in teams" v-bind:key="team.id">
+              <p>
+                Team ID: {{ team.id }}
+                <router-link v-bind:to="`/teams/${team.id}`">
+                  {{ team.team_name }}</router-link
+                >
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <!-- End Featured Section -->
-
-      <!-- ======= Why Us Section ======= -->
-      <section id="why-us" class="why-us">
+      <hr>
+      <!-- End Teams Selection Section -->
+      <!-- ======= Create Section ======= -->
+      <section id="create" class="create">
         <div class="container-fluid">
           <div class="row">
             <div
               class="col-lg-7 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-stretch"
             >
               <div class="content" data-aos="fade-up">
-                <h3>
-                  Eum ipsam laborum deleniti
-                  <strong>velit pariatur architecto aut nihil</strong>
-                </h3>
+                <h3>Add New Games !</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Duis aute irure dolor in reprehenderit
+                  Due to being in California where sports-betting is illegal,
+                  many API's are blocked so a continuous feed of scores/spreads
+                  are unavailable. Because of this, all games must be added
+                  manually. Please contribute by filling in below to add games
+                  to the database.
                 </p>
               </div>
-
-              <div class="accordion-list">
-                <ul>
-                  <li data-aos="fade-up" data-aos-delay="100">
-                    <a
-                      data-bs-toggle="collapse"
-                      class="collapse"
-                      data-bs-target="#accordion-list-1"
-                      ><span>01</span> Non consectetur a erat nam at lectus urna
-                      duis? <i class="bx bx-chevron-down icon-show"></i
-                      ><i class="bx bx-chevron-up icon-close"></i
-                    ></a>
-                    <div
-                      id="accordion-list-1"
-                      class="collapse show"
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p>
-                        Feugiat pretium nibh ipsum consequat. Tempus iaculis
-                        urna id volutpat lacus laoreet non curabitur gravida.
-                        Venenatis lectus magna fringilla urna porttitor rhoncus
-                        dolor purus non.
-                      </p>
-                    </div>
-                  </li>
-
-                  <li data-aos="fade-up" data-aos-delay="200">
-                    <a
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordion-list-2"
-                      class="collapsed"
-                      ><span>02</span> Feugiat scelerisque varius morbi enim
-                      nunc? <i class="bx bx-chevron-down icon-show"></i
-                      ><i class="bx bx-chevron-up icon-close"></i
-                    ></a>
-                    <div
-                      id="accordion-list-2"
-                      class="collapse"
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p>
-                        Dolor sit amet consectetur adipiscing elit pellentesque
-                        habitant morbi. Id interdum velit laoreet id donec
-                        ultrices. Fringilla phasellus faucibus scelerisque
-                        eleifend donec pretium. Est pellentesque elit
-                        ullamcorper dignissim. Mauris ultrices eros in cursus
-                        turpis massa tincidunt dui.
-                      </p>
-                    </div>
-                  </li>
-
-                  <li data-aos="fade-up" data-aos-delay="300">
-                    <a
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordion-list-3"
-                      class="collapsed"
-                      ><span>03</span> Dolor sit amet consectetur adipiscing
-                      elit? <i class="bx bx-chevron-down icon-show"></i
-                      ><i class="bx bx-chevron-up icon-close"></i
-                    ></a>
-                    <div
-                      id="accordion-list-3"
-                      class="collapse"
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p>
-                        Eleifend mi in nulla posuere sollicitudin aliquam
-                        ultrices sagittis orci. Faucibus pulvinar elementum
-                        integer enim. Sem nulla pharetra diam sit amet nisl
-                        suscipit. Rutrum tellus pellentesque eu tincidunt.
-                        Lectus urna duis convallis convallis tellus. Urna
-                        molestie at elementum eu facilisis sed odio morbi quis
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+              <ul>
+                <li>
+                  <p>Date: <input type="text" v-model="newScore.date" /></p>
+                </li>
+                <div>
+                  <li><label>Home Team :</label></li>
+                  <select v-model="newScore.home_team">
+                    <option disabled value="">Please select one</option>
+                    <option>Washington Football Team</option>
+                    <option>Baltimore Ravens</option>
+                    <option>Green Bay Packers</option>
+                    <option>San Francisco 49ers</option>
+                    <option>Denver Broncos</option>
+                    <option>Cincinnati Bengals</option>
+                    <option>Houston Texans</option>
+                    <option>Indianapolis Colts</option>
+                    <option>Jacksonville Jaguars</option>
+                    <option>Miami Dolphins</option>
+                    <option>New England Patriots</option>
+                    <option>New York Giants</option>
+                    <option>New Orleans Saints</option>
+                    <option>Dallas Cowboys</option>
+                    <option>Detroit Lions</option>
+                    <option>Tampa Bay Buccaneers</option>
+                    <option>Los Angeles Chargers</option>
+                    <option>Kansas City Chiefs</option>
+                    <option>Seattle Seahawks</option>
+                    <option>Las Vegas Raiders</option>
+                    <option>Buffalo Bills</option>
+                    <option>Carolina Panthers</option>
+                    <option>Chicago Bears</option>
+                    <option>Cleveland Browns</option>
+                    <option>Minnesota Vikings</option>
+                    <option>New York Jets</option>
+                    <option>Philadelphia Eagles</option>
+                    <option>Tennessee Titans</option>
+                    <option>Atlanta Falcons</option>
+                    <option>Arizona Cardinals</option>
+                    <option>Pittsburgh Steelers</option>
+                    <option>Los Angeles Rams</option>
+                  </select>
+                </div>
+                <p></p>
+                <div>
+                  <li><label>Away Team :</label></li>
+                  <select v-model="newScore.away_team">
+                    <option disabled value="">Please select one</option>
+                    <option>Washington Football Team</option>
+                    <option>Baltimore Ravens</option>
+                    <option>Green Bay Packers</option>
+                    <option>San Francisco 49ers</option>
+                    <option>Denver Broncos</option>
+                    <option>Cincinnati Bengals</option>
+                    <option>Houston Texans</option>
+                    <option>Indianapolis Colts</option>
+                    <option>Jacksonville Jaguars</option>
+                    <option>Miami Dolphins</option>
+                    <option>New England Patriots</option>
+                    <option>New York Giants</option>
+                    <option>New Orleans Saints</option>
+                    <option>Dallas Cowboys</option>
+                    <option>Detroit Lions</option>
+                    <option>Tampa Bay Buccaneers</option>
+                    <option>Los Angeles Chargers</option>
+                    <option>Kansas City Chiefs</option>
+                    <option>Seattle Seahawks</option>
+                    <option>Las Vegas Raiders</option>
+                    <option>Buffalo Bills</option>
+                    <option>Carolina Panthers</option>
+                    <option>Chicago Bears</option>
+                    <option>Cleveland Browns</option>
+                    <option>Minnesota Vikings</option>
+                    <option>New York Jets</option>
+                    <option>Philadelphia Eagles</option>
+                    <option>Tennessee Titans</option>
+                    <option>Atlanta Falcons</option>
+                    <option>Arizona Cardinals</option>
+                    <option>Pittsburgh Steelers</option>
+                    <option>Los Angeles Rams</option>
+                  </select>
+                </div>
+                <p></p>
+                <li>
+                  <p>
+                    Home Score:
+                    <input type="text" v-model="newScore.home_score" />
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Away Score:
+                    <input type="text" v-model="newScore.away_score" />
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Home Spread:
+                    <input type="text" v-model="newScore.closing_spread_home" />
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Away Spread:
+                    <input type="text" v-model="newScore.closing_spread_away" />
+                  </p>
+                </li>
+              </ul>
+              <p><button v-on:click="createScore()">Add A New Game</button></p>
             </div>
 
             <div
@@ -334,461 +307,7 @@
           </div>
         </div>
       </section>
-      <!-- End Why Us Section -->
-
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Portfolio</h2>
-            <p>
-              Magnam dolores commodi suscipit eius consequatur ex aliquid fuga
-              eum quidem
-            </p>
-          </div>
-
-          <div class="row" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-lg-12 d-flex justify-content-center">
-              <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-app">App</li>
-                <li data-filter=".filter-card">Card</li>
-                <li data-filter=".filter-web">Web</li>
-              </ul>
-            </div>
-          </div>
-
-          <div
-            class="row portfolio-container"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-1.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>App</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-1.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="App 1"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-2.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Web 3</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-2.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="Web 3"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-3.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>App</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-3.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="App 2"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-4.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Card 2</h4>
-                  <p>Card</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-4.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="Card 2"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-5.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Web 2</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-5.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="Web 2"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-6.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>App</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-6.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="App 3"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-7.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Card 1</h4>
-                  <p>Card</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-7.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="Card 1"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-8.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Card 3</h4>
-                  <p>Card</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-8.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="Card 3"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-9.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Web 3</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-9.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="Web 3"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Portfolio Section -->
-
-      <!-- ======= Testimonials Section ======= -->
-      <section id="testimonials" class="testimonials">
-        <div class="container" data-aos="zoom-in">
-          <div class="quote-icon">
-            <i class="bx bxs-quote-right"></i>
-          </div>
-
-          <div
-            class="testimonials-slider swiper"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    Proin iaculis purus consequat sem cure digni ssim donec
-                    porttitora entum suscipit rhoncus. Accusantium quam,
-                    ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                    risus at semper.
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-1.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    Export tempor illum tamen malis malis eram quae irure esse
-                    labore quem cillum quid cillum eram malis quorum velit fore
-                    eram velit sunt aliqua noster fugiat irure amet legam anim
-                    culpa.
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-2.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    Enim nisi quem export duis labore cillum quae magna enim
-                    sint quorum nulla quem veniam duis minim tempor labore quem
-                    eram duis noster aute amet eram fore quis sint minim.
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-3.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                    multos export minim fugiat minim velit minim dolor enim duis
-                    veniam ipsum anim magna sunt elit fore quem dolore labore
-                    illum veniam.
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-4.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure
-                    aliqua veniam tempor noster veniam enim culpa labore duis
-                    sunt culpa nulla illum cillum fugiat legam esse veniam culpa
-                    fore nisi cillum quid.
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-5.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- End Testimonials Section -->
-
-      <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-2 col-md-4 col-6" data-aos="zoom-in">
-              <img
-                src="assets/img/clients/client-1.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <img
-                src="assets/img/clients/client-2.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <img
-                src="assets/img/clients/client-3.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <img
-                src="assets/img/clients/client-4.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <img
-                src="assets/img/clients/client-5.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6"
-              data-aos="zoom-in"
-              data-aos-delay="500"
-            >
-              <img
-                src="assets/img/clients/client-6.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Clients Section -->
+      <!-- End Create Section -->
 
       <!-- ======= Team Section ======= -->
       <section id="team" class="team">
@@ -887,321 +406,11 @@
       </section>
       <!-- End Team Section -->
 
-      <!-- ======= Pricing Section ======= -->
-      <section id="pricing" class="pricing section-bg">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Pricing</h2>
-            <p>
-              Magnam dolores commodi suscipit eius consequatur ex aliquid fuga
-              eum quidem
-            </p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                <h3>Free</h3>
-                <h4><sup>$</sup>0<span> / month</span></h4>
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li class="na">Pharetra massa</li>
-                  <li class="na">Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-              <div class="box recommended" data-aos="zoom-in">
-                <span class="recommended-badge">Recommended</span>
-                <h3>Business</h3>
-                <h4><sup>$</sup>19<span> / month</span></h4>
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                  <li class="na">Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-              <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                <h3>Developer</h3>
-                <h4><sup>$</sup>29<span> / month</span></h4>
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                  <li>Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Pricing Section -->
-
-      <!-- ======= Frequently Asked Questions Section ======= -->
-      <section id="faq" class="faq">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Frequently Asked Questions</h2>
-          </div>
-
-          <ul class="faq-list">
-            <li data-aos="fade-up">
-              <a
-                data-bs-toggle="collapse"
-                class="collapsed"
-                data-bs-target="#faq1"
-                >Non consectetur a erat nam at lectus urna duis?
-                <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                  volutpat lacus laoreet non curabitur gravida. Venenatis lectus
-                  magna fringilla urna porttitor rhoncus dolor purus non.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="100">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq2"
-                class="collapsed"
-                >Feugiat scelerisque varius morbi enim nunc faucibus a
-                pellentesque? <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque
-                  habitant morbi. Id interdum velit laoreet id donec ultrices.
-                  Fringilla phasellus faucibus scelerisque eleifend donec
-                  pretium. Est pellentesque elit ullamcorper dignissim. Mauris
-                  ultrices eros in cursus turpis massa tincidunt dui.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="200">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq3"
-                class="collapsed"
-                >Dolor sit amet consectetur adipiscing elit pellentesque
-                habitant morbi? <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                  sagittis orci. Faucibus pulvinar elementum integer enim. Sem
-                  nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                  pellentesque eu tincidunt. Lectus urna duis convallis
-                  convallis tellus. Urna molestie at elementum eu facilisis sed
-                  odio morbi quis
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="300">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq4"
-                class="collapsed"
-                >Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque
-                  habitant morbi. Id interdum velit laoreet id donec ultrices.
-                  Fringilla phasellus faucibus scelerisque eleifend donec
-                  pretium. Est pellentesque elit ullamcorper dignissim. Mauris
-                  ultrices eros in cursus turpis massa tincidunt dui.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="400">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq5"
-                class="collapsed"
-                >Tempus quam pellentesque nec nam aliquam sem et tortor
-                consequat? <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo.
-                  Dignissim suspendisse in est ante in. Nunc vel risus commodo
-                  viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                  bibendum est. Purus gravida quis blandit turpis cursus in
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="500">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq6"
-                class="collapsed"
-                >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
-                turpis nunc eget lorem dolor?
-                <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris
-                  vitae ultricies leo integer malesuada nunc vel. Tincidunt eget
-                  nullam non nisi est sit amet. Turpis nunc eget lorem dolor
-                  sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                  Pellentesque diam volutpat commodo sed egestas egestas
-                  fringilla phasellus faucibus. Nibh tellus molestie nunc non
-                  blandit massa enim nec.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- End Frequently Asked Questions Section -->
-
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Contact</h2>
-            <p>
-              Magnam dolores commodi suscipit eius consequatur ex aliquid fuga
-              eum quidem
-            </p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-4">
-              <div
-                class="info d-flex flex-column justify-content-center"
-                data-aos="fade-right"
-              >
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street,<br />New York, NY 535022</p>
-                </div>
-
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>info@example.com</p>
-                </div>
-
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 55s</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-8 mt-5 mt-lg-0">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-                data-aos="fade-left"
-              >
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Your Name"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </div>
-                <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="5"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div>
-                <div class="text-center">
-                  <button type="submit">Send Message</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Contact Section -->
+     
+      
     </main>
     <!-- End #main -->
-
-    <h1>Team Index</h1>
-    <div v-for="team in teams" v-bind:key="team.id">
-      <p>
-        Team ID: {{ team.id }}
-        <router-link v-bind:to="`/teams/${team.id}`">
-          {{ team.team_name }}</router-link
-        >
-      </p>
-    </div>
+    
   </div>
 </template>
 
@@ -1213,6 +422,15 @@ export default {
   data: function () {
     return {
       teams: [],
+      newScore: {
+        date: "",
+        home_team: "",
+        away_team: "",
+        home_score: "",
+        away_score: "",
+        closing_spread_home: "",
+        closing_spread_away: "",
+      },
     };
   },
   created: function () {
@@ -1224,6 +442,22 @@ export default {
         console.log("teams index", response);
         this.teams = response.data;
       });
+    },
+    createScore: function () {
+      console.log("creating new score...");
+      axios
+        .post("/scores", {
+          input_date: this.newScore.date,
+          input_home_team: this.newScore.home_team,
+          input_away_team: this.newScore.away_team,
+          input_home_score: this.newScore.home_score,
+          input_away_score: this.newScore.away_score,
+          input_closing_spread_home: this.newScore.closing_spread_home,
+          input_closing_spread_away: this.newScore.closing_spread_away,
+        })
+        .then((response) => {
+          console.log(response.data);
+        });
     },
   },
 };

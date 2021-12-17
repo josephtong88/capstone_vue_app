@@ -1497,3 +1497,8 @@ section {
   font-size: 13px;
   padding-top: 5px;
 }
+
+
+.column_wrapper {
+  column-count: 3;
+}
