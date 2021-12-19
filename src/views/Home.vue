@@ -403,6 +403,10 @@
             </div>
           </div>
         </div>
+
+<iframe src="https://swishanalytics.com/partners/nfl/game-preview-teams?id=322"
+style="display:block; margin:auto; width: 100%; height:355px;" allowtransparency="true" frameborder="0" ></iframe>
+      
       </section>
       <!-- End Team Section -->
 

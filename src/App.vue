@@ -15,10 +15,11 @@
            
           </ul>
         </nav>
-        <!-- .navbar -->
+
       </div>
     </header>
     <!-- End Header -->
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -44,9 +45,3 @@
 </template>
 
 <style></style>
-<div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/create">Create</router-link> |
-       <router-link to="/scores">Scores</router-link> 
-      
-    </div>
