@@ -118,7 +118,8 @@ export default {
         )
         .then((response) => {
           console.log("scores index", response);
-          this.scores = response.data;
+          this.scores = response.data.scores;
+          this.record = response.data.record;
         });
     },
     datedoppsindexscores: function () {
@@ -128,7 +129,8 @@ export default {
         )
         .then((response) => {
           console.log("scores index", response);
-          this.scores = response.data;
+          this.scores = response.data.scores;
+            this.record = response.data.record;
         });
     },
 
@@ -137,7 +139,8 @@ export default {
         .get(`/oppteams/${this.$route.params.id}?opp=${this.opp}`)
         .then((response) => {
           console.log("scores index", response);
-          this.scores = response.data;
+           this.scores = response.data.scores;
+            this.record = response.data.record;
         });
     },
 
