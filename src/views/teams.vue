@@ -63,7 +63,11 @@
     <li><button v-on:click="oppindexscores">Search by Opponent</button></li><p></p>
   <li><button v-on:click="datedoppsindexscores">
       Search by Date Range and Opponent
-    </button></li></ul>
+  </button></li><p></p>
+  
+    <li><button v-on:click="homescores">All Home Games</button></li><p></p>
+    <li><button v-on:click="awayscores">All Away Games</button></li><p></p>
+    </ul>
     <hr>
     {{ record }}
     <hr>
@@ -148,6 +152,20 @@ export default {
       axios.get("/showteams/" + this.$route.params.id).then((response) => {
         console.log("Team Name", response);
         this.team = response.data;
+      });
+    },
+    homescores: function () {
+      axios.get(`/hometeams/${this.$route.params.id}`).then((response) => {
+        console.log("scores index", response);
+        this.scores = response.data.scores;
+        this.record = response.data.record;
+      });
+    },
+    awayscores: function () {
+      axios.get(`/awayteams/${this.$route.params.id}`).then((response) => {
+        console.log("scores index", response);
+        this.scores = response.data.scores;
+        this.record = response.data.record;
       });
     },
   },

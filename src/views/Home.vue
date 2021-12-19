@@ -79,7 +79,7 @@
           </div>
         </div>
       </section>
-      <hr>
+      <hr />
       <!-- End About Us Section -->
 
       <!-- ======= Services Section ======= -->
@@ -140,7 +140,7 @@
           </div>
         </div>
       </section>
-<hr>
+      <hr />
       <!-- End Services Section -->
 
       <!-- ======= Teams Selection Section ======= -->
@@ -163,7 +163,21 @@
           </div>
         </div>
       </section>
-      <hr>
+      <hr />
+      <!-- End Teams Selection Section -->
+
+      <!-- ======= Teams Selection Section ======= -->
+      <section id="schedule" class="schedule">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>Schedule</h2>
+            <div id="DOM_element_id_in_your_website_1639936180795"></div>
+          </div>
+
+          
+        </div>
+      </section>
+      <hr />
       <!-- End Teams Selection Section -->
       <!-- ======= Create Section ======= -->
       <section id="create" class="create">
@@ -404,17 +418,11 @@
           </div>
         </div>
 
-<iframe src="https://swishanalytics.com/partners/nfl/game-preview-teams?id=322"
-style="display:block; margin:auto; width: 100%; height:355px;" allowtransparency="true" frameborder="0" ></iframe>
-      
+       
       </section>
       <!-- End Team Section -->
-
-     
-      
     </main>
     <!-- End #main -->
-    
   </div>
 </template>
 
@@ -465,4 +473,30 @@ export default {
     },
   },
 };
+(function (b, s, p, o, r, t) {
+  b["broadage"] = b["broadage"] || [];
+  if (!b["broadage"].length) {
+    r = document.createElement(s);
+    t = document.getElementsByTagName(s)[0];
+    r.async = true;
+    r.src = p;
+    t.parentNode.insertBefore(r, t);
+  }
+  b["broadage"].push({
+    bundleId: o.bundleId,
+    widgets: o.widgets,
+    accountId: o.accountId,
+  });
+})(window, "script", "//cdn-saas.broadage.com/widgets/loader/loader.js", {
+  bundleId: ["football-fx"],
+  accountId: "ebc86948-925f-4dce-b95c-1f8d76d6bdcf",
+  widgets: {
+    footballFixture: [
+      {
+        element: "DOM_element_id_in_your_website_1639936180795",
+        tournamentId: 1,
+      },
+    ],
+  },
+});
 </script>
