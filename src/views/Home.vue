@@ -17,10 +17,10 @@
               <a class="nav-link scrollto" href="#report_types">Reporting</a>
             </li>
             <li><a class="nav-link scrollto" href="#teams">Teams</a></li>
-            <li><a class="nav-link scrollto" href="#create">Create</a></li>
             <li>
               <a class="nav-link scrollto" href="#schedule">NFL Schedule</a>
             </li>
+            <li><a class="nav-link scrollto" href="#create">Create</a></li>
             <li>
               <a class="nav-link scrollto" href="#twitter">NFL Twitter</a>
             </li>
