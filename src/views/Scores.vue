@@ -1,5 +1,23 @@
 <template>
   <div class="Score">
+    <router-view />
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <a href="/"
+            ><img src="assets/img/logo.png" alt="" class="img-fluid"
+          /></a>
+        </div>
+
+        <!-- .navbar -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><router-link to="/home">Home</router-link></li>
+                  <li><router-link to="/scores">Scores Index</router-link></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <h1>Scores Index</h1>
     <div
       v-for="score in scores" v-bind:key="score.id">

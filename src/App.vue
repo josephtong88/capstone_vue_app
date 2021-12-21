@@ -12,14 +12,11 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><router-link to="/home">Home</router-link></li>
-           
           </ul>
         </nav>
-
       </div>
     </header>
     <!-- End Header -->
-
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -30,16 +27,17 @@
               <a href="#header" class="scrollto footer-logo"
                 ><img src="assets/img/hero-logo.png" alt=""
               /></a>
-              <h3>Knight</h3>
+              <h3>Against The Spread</h3>
               <p>
-                Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
-                eligendi fuga maxime saepe commodi placeat.
+                All information used for entertainment purposes only. If you or
+                someone you know may have an issue with gambling, contact
+                1-800-GAM-BLER
               </p>
             </div>
           </div>
         </div>
       </div>
-         </footer>
+    </footer>
     <!-- End Footer -->
   </div>
 </template>

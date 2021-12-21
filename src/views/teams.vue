@@ -1,5 +1,4 @@
 <template>
-
   <div class="Teams">
     <router-view />
     <header id="header" class="d-flex align-items-center">
@@ -14,76 +13,133 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><router-link to="/home">Home</router-link></li>
-                  <li><router-link to="/scores">Scores Index</router-link></li>
+            <li><router-link to="/scores">Scores Index</router-link></li>
           </ul>
         </nav>
       </div>
     </header>
-    <h1>{{ team.team_name }}</h1>
-    <p>Select date parameters if required between:</p>
-    <p><input type="text" v-model="start_date" /> start date</p>
-    <p><input type="text" v-model="end_date" /> end date</p>
-    <select v-model="opp">
-      <option disabled value="">Please select one</option>
-      <option>Washington Football Team</option>
-      <option>Baltimore Ravens</option>
-      <option>Green Bay Packers</option>
-      <option>San Francisco 49ers</option>
-      <option>Denver Broncos</option>
-      <option>Cincinnati Bengals</option>
-      <option>Houston Texans</option>
-      <option>Indianapolis Colts</option>
-      <option>Jacksonville Jaguars</option>
-      <option>Miami Dolphins</option>
-      <option>New England Patriots</option>
-      <option>New York Giants</option>
-      <option>New Orleans Saints</option>
-      <option>Dallas Cowboys</option>
-      <option>Detroit Lions</option>
-      <option>Tampa Bay Buccaneers</option>
-      <option>Los Angeles Chargers</option>
-      <option>Kansas City Chiefs</option>
-      <option>Seattle Seahawks</option>
-      <option>Las Vegas Raiders</option>
-      <option>Buffalo Bills</option>
-      <option>Carolina Panthers</option>
-      <option>Chicago Bears</option>
-      <option>Cleveland Browns</option>
-      <option>Minnesota Vikings</option>
-      <option>New York Jets</option>
-      <option>Philadelphia Eagles</option>
-      <option>Tennessee Titans</option>
-      <option>Atlanta Falcons</option>
-      <option>Arizona Cardinals</option>
-      <option>Pittsburgh Steelers</option>
-      <option>Los Angeles Rams</option>
-    </select>
-<p></p>
-    <ul><li><button v-on:click="datedindexscores">Search By Date Range</button></li><p></p>
-    <li><button v-on:click="oppindexscores">Search by Opponent</button></li><p></p>
-  <li><button v-on:click="datedoppsindexscores">
-      Search by Date Range and Opponent
-  </button></li><p></p>
-  
-    <li><button v-on:click="homescores">All Home Games</button></li><p></p>
-    <li><button v-on:click="awayscores">All Away Games</button></li><p></p>
-    </ul>
-    <hr>
-    {{ record }}
-    <hr>
-    <div v-for="score in scores" v-bind:key="score.id">
-      <p>Date: {{ score.date }}</p>
-      <p>Home Team: {{ score.home_team }} ({{ score.closing_spread_home }})</p>
-      <p>Away Team: {{ score.away_team }} ({{ score.closing_spread_away }})</p>
-      <p></p>
-      <p>
-        Final Score: {{ score.home_team }}: {{ score.home_score }} to
-        {{ score.away_team }}: {{ score.away_score }}.
-      </p>
-      <p>Did the home team cover? {{ score.home_team_cover }}</p>
-      <p>Did the away team cover? {{ score.away_team_cover }}</p>
-    </div>
+    <main id="main">
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h1>{{ team.team_name }}</h1>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="image">
+                <p>Select date parameters if required between:</p>
+                <p><input type="date" v-model="start_date" /> start date</p>
+                <p><input type="date" v-model="end_date" /> end date</p>
+                <select v-model="opp">
+                  <option disabled value="">Please select one</option>
+                  <option>Washington Football Team</option>
+                  <option>Baltimore Ravens</option>
+                  <option>Green Bay Packers</option>
+                  <option>San Francisco 49ers</option>
+                  <option>Denver Broncos</option>
+                  <option>Cincinnati Bengals</option>
+                  <option>Houston Texans</option>
+                  <option>Indianapolis Colts</option>
+                  <option>Jacksonville Jaguars</option>
+                  <option>Miami Dolphins</option>
+                  <option>New England Patriots</option>
+                  <option>New York Giants</option>
+                  <option>New Orleans Saints</option>
+                  <option>Dallas Cowboys</option>
+                  <option>Detroit Lions</option>
+                  <option>Tampa Bay Buccaneers</option>
+                  <option>Los Angeles Chargers</option>
+                  <option>Kansas City Chiefs</option>
+                  <option>Seattle Seahawks</option>
+                  <option>Las Vegas Raiders</option>
+                  <option>Buffalo Bills</option>
+                  <option>Carolina Panthers</option>
+                  <option>Chicago Bears</option>
+                  <option>Cleveland Browns</option>
+                  <option>Minnesota Vikings</option>
+                  <option>New York Jets</option>
+                  <option>Philadelphia Eagles</option>
+                  <option>Tennessee Titans</option>
+                  <option>Atlanta Falcons</option>
+                  <option>Arizona Cardinals</option>
+                  <option>Pittsburgh Steelers</option>
+                  <option>Los Angeles Rams</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3">
+                <ul>
+                  <li>
+                    <button v-on:click="datedindexscores">
+                      Search By Date Range
+                    </button>
+                  </li>
+                  <p></p>
+                  <li>
+                    <button v-on:click="oppindexscores">
+                      Search by Opponent
+                    </button>
+                  </li>
+                  <p></p>
+                  <li>
+                    <button v-on:click="datedoppsindexscores">
+                      Search by Date Range and Opponent
+                    </button>
+                  </li>
+                  <p></p>
+
+                  <li>
+                    <button v-on:click="homescores">All Home Games</button>
+                  </li>
+                  <p></p>
+                  <li>
+                    <button v-on:click="awayscores">All Away Games</button>
+                  </li>
+                  <p></p>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <hr />
+    </main>
+ <section id="teams" class="teams">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h4>{{ record }}</h4>
+            
+            
+             
+            </div>
+          </div>
+       
+      </section>
+ 
+    <hr />
+
+    <div v-for="score in scores" v-bind:key="score.id">
+      <div class="container-sm border">
+        <p>Date: {{ score.date }}</p>
+        <p>
+          Home Team: {{ score.home_team }} ({{ score.closing_spread_home }})
+        </p>
+        <p>
+          Away Team: {{ score.away_team }} ({{ score.closing_spread_away }})
+        </p>
+        <p></p>
+        <p>
+          Final Score: {{ score.home_team }}: {{ score.home_score }} to
+          {{ score.away_team }}: {{ score.away_score }}.
+        </p>
+        <p>Did the home team cover? {{ score.home_team_cover }}</p>
+        <p>Did the away team cover? {{ score.away_team_cover }}</p>
+      </div>
+
+      <p></p>
+    </div>
   </div>
 </template>
 
@@ -134,7 +190,7 @@ export default {
         .then((response) => {
           console.log("scores index", response);
           this.scores = response.data.scores;
-            this.record = response.data.record;
+          this.record = response.data.record;
         });
     },
 
@@ -143,8 +199,8 @@ export default {
         .get(`/oppteams/${this.$route.params.id}?opp=${this.opp}`)
         .then((response) => {
           console.log("scores index", response);
-           this.scores = response.data.scores;
-            this.record = response.data.record;
+          this.scores = response.data.scores;
+          this.record = response.data.record;
         });
     },
 

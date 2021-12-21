@@ -20,6 +20,7 @@
             <li><a class="nav-link scrollto" href="#teams">Teams</a></li>
             <li><a class="nav-link scrollto" href="#create">Create</a></li>
             <li><router-link to="/scores">Scores Index</router-link></li>
+            <li><a class="nav-link scrollto" href="#twitter">NFL Twitter</a></li>
           </ul>
         </nav>
       </div>
@@ -311,116 +312,32 @@
               style="background-image: url('assets/img/why-us.jpg')"
               data-aos="zoom-in"
             >
-              <a
-                href="https://www.youtube.com/watch?v=LIqQNG_q2us"
-                class="venobox play-btn mb-4"
-                data-vbtype="video"
-                data-autoplay="true"
-              ></a>
+              
             </div>
           </div>
         </div>
       </section>
       <!-- End Create Section -->
-
-      <!-- ======= Team Section ======= -->
-      <section id="team" class="team">
+ <!-- ======= Teams Twitter Section ======= -->
+      <section id="twitter" class="twitter">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
-            <h2>Team</h2>
-            <p>
-              Magnam dolores commodi suscipit eius consequatur ex aliquid fuga
-              eum quidem
-            </p>
+            <h2>NFL Twitter Feed</h2>
           </div>
-
-          <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="zoom-in">
-                <div class="member-img">
-                  <img
-                    src="assets/img/team/team-1.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                  <p>
-                    Animi est delectus alias quam repellendus nihil nobis dolor.
-                    Est sapiente occaecati et dolore. Omnis aut ut nesciunt
-                    explicabo qui. Eius nam deleniti ut omnis
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                <div class="member-img">
-                  <img
-                    src="assets/img/team/team-2.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <p>
-                    Aspernatur iste esse aliquam enim et corporis. Molestiae
-                    voluptatem aut eligendi quis aut. Libero vel amet voluptatem
-                    eos rerum non doloremque
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                <div class="member-img">
-                  <img
-                    src="assets/img/team/team-3.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <p>
-                    Ut enim possimus nihil cupiditate beatae. Veniam facere quae
-                    non qui necessitatibus rerum eos vero. Maxime sit sunt quo
-                    dolor autem est qui quaerat
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+ <a
+    class="twitter-timeline"
+    data-width="750"
+    data-height="500"
+    :href="src"
+    :data-theme="dark ? 'dark' : 'light'"
+    :data-link-color="dataLinkColor"
+  ></a>
+          
         </div>
-
-       
       </section>
-      <!-- End Team Section -->
+      <hr />
+      <!-- End Teams Selection Section -->
+      
     </main>
     <!-- End #main -->
   </div>
@@ -445,8 +362,26 @@ export default {
       },
     };
   },
+  props: {
+    src: {
+      type: String,
+      default: "https://twitter.com/nfl?ref_src=twsrc%5Etfw"
+    },
+    dark: {
+      type: Boolean,
+      default: false
+    },
+    dataLinkColor: {
+      type: String,
+      default: "#2B7BB9"
+    }
+  },
+
   created: function () {
     this.indexteams();
+    let twitterFeed = document.createElement("script");
+    twitterFeed.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    document.head.appendChild(twitterFeed);
   },
   methods: {
     indexteams: function () {
@@ -472,6 +407,7 @@ export default {
         });
     },
   },
+  
 };
 (function (b, s, p, o, r, t) {
   b["broadage"] = b["broadage"] || [];
