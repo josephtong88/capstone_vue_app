@@ -21,14 +21,14 @@
     <main id="main">
       <section id="about" class="about">
         <div class="container">
-          <div class="section-title" data-aos="fade-up">
+          <div class="section-title">
            <p></p><p></p><p></p><p></p><p></p><p></p><p></p>
            <br><p></p><p></p><p></p><br>
             <h1>{{ team.team_name }}</h1>
           </div>
 
           <div class="row">
-            <div class="col-lg-6" data-aos="fade-right">
+            <div class="col-lg-6">
               <div class="image">
                 <p>Select date parameters if required between:</p>
                 <p><input type="date" v-model="start_date" /> start date</p>
@@ -70,7 +70,7 @@
                 </select>
               </div>
             </div>
-            <div class="col-lg-6" data-aos="fade-left">
+            <div class="col-lg-6">
               <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3">
                 <ul>
                   <li>
@@ -100,6 +100,10 @@
                     <button v-on:click="awayscores">All Away Games</button>
                   </li>
                   <p></p>
+                    <li>
+                    <button v-on:click="indexscores">All Games</button>
+                  </li>
+                  <p></p>
                 </ul>
               </div>
             </div>
@@ -110,7 +114,7 @@
     </main>
  <section id="teams" class="teams">
         <div class="container">
-          <div class="section-title" data-aos="fade-up">
+          <div class="section-title">
             <h4>{{ record }}</h4>
             
             

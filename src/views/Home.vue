@@ -18,10 +18,13 @@
             </li>
             <li><a class="nav-link scrollto" href="#teams">Teams</a></li>
             <li><a class="nav-link scrollto" href="#create">Create</a></li>
-            <li><router-link to="/scores">Scores Index</router-link></li>
+            <li>
+              <a class="nav-link scrollto" href="#schedule">NFL Schedule</a>
+            </li>
             <li>
               <a class="nav-link scrollto" href="#twitter">NFL Twitter</a>
             </li>
+            <li><router-link to="/scores">Scores Index</router-link></li>
           </ul>
         </nav>
       </div>
@@ -33,8 +36,19 @@
       <section id="about" class="about">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
-              <p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-           <br><p></p><p></p><p></p><br><h2>About Me</h2>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <br />
+            <p></p>
+            <p></p>
+            <p></p>
+            <br />
+            <h2>About Me</h2>
           </div>
 
           <div class="row">
@@ -132,6 +146,20 @@
                 <i class="bx bx-shield"></i>
                 <h4>Select specific Oponents</h4>
                 <p>Filter by what oppents you want to see against your team.</p>
+              </div>
+              <div
+                class="icon-box mt-5"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <i class="bx bx-shield"></i>
+                <h4>How to read</h4>
+                <p>
+                  For each NFL game, there is a favorite and an underdog. The
+                  "Spread" is the amount of points the favored team is projected
+                  to win by (-#). In order to win "Against The Spread," the team
+                  must win by more than the favored amount.
+                </p>
               </div>
             </div>
             <div
