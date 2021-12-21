@@ -1,6 +1,6 @@
 <template>
   <div class="Teams">
-    <router-view />
+   
     <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
         <div class="logo">
@@ -22,6 +22,8 @@
       <section id="about" class="about">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
+           <p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+           <br><p></p><p></p><p></p><br>
             <h1>{{ team.team_name }}</h1>
           </div>
 

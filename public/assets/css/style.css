@@ -75,6 +75,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   background: #fff;
   box-shadow: 0 4px 10px -3px rgba(191, 191, 191, 0.5);
+  position: fixed;
+  width: 100%
+
 }
 #header .logo h1 {
   font-size: 28px;

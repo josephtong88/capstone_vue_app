@@ -1,6 +1,5 @@
 <template>
   <div class="Home">
-    <router-view />
     <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
         <div class="logo">
@@ -20,7 +19,9 @@
             <li><a class="nav-link scrollto" href="#teams">Teams</a></li>
             <li><a class="nav-link scrollto" href="#create">Create</a></li>
             <li><router-link to="/scores">Scores Index</router-link></li>
-            <li><a class="nav-link scrollto" href="#twitter">NFL Twitter</a></li>
+            <li>
+              <a class="nav-link scrollto" href="#twitter">NFL Twitter</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -32,7 +33,8 @@
       <section id="about" class="about">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
-            <h2>About Me</h2>
+              <p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+           <br><p></p><p></p><p></p><br><h2>About Me</h2>
           </div>
 
           <div class="row">
@@ -174,8 +176,6 @@
             <h2>Schedule</h2>
             <div id="DOM_element_id_in_your_website_1639936180795"></div>
           </div>
-
-          
         </div>
       </section>
       <hr />
@@ -311,33 +311,29 @@
               class="col-lg-5 order-1 order-lg-2 align-items-stretch video-box"
               style="background-image: url('assets/img/why-us.jpg')"
               data-aos="zoom-in"
-            >
-              
-            </div>
+            ></div>
           </div>
         </div>
       </section>
       <!-- End Create Section -->
- <!-- ======= Teams Twitter Section ======= -->
+      <!-- ======= Teams Twitter Section ======= -->
       <section id="twitter" class="twitter">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
             <h2>NFL Twitter Feed</h2>
           </div>
- <a
-    class="twitter-timeline"
-    data-width="750"
-    data-height="500"
-    :href="src"
-    :data-theme="dark ? 'dark' : 'light'"
-    :data-link-color="dataLinkColor"
-  ></a>
-          
+          <a
+            class="twitter-timeline"
+            data-width="750"
+            data-height="500"
+            :href="src"
+            :data-theme="dark ? 'dark' : 'light'"
+            :data-link-color="dataLinkColor"
+          ></a>
         </div>
       </section>
       <hr />
       <!-- End Teams Selection Section -->
-      
     </main>
     <!-- End #main -->
   </div>
@@ -365,16 +361,16 @@ export default {
   props: {
     src: {
       type: String,
-      default: "https://twitter.com/nfl?ref_src=twsrc%5Etfw"
+      default: "https://twitter.com/nfl?ref_src=twsrc%5Etfw",
     },
     dark: {
       type: Boolean,
-      default: false
+      default: false,
     },
     dataLinkColor: {
       type: String,
-      default: "#2B7BB9"
-    }
+      default: "#2B7BB9",
+    },
   },
 
   created: function () {
@@ -407,7 +403,6 @@ export default {
         });
     },
   },
-  
 };
 (function (b, s, p, o, r, t) {
   b["broadage"] = b["broadage"] || [];
