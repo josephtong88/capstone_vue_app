@@ -111,7 +111,7 @@
             <div class="col-lg-6 order-2 order-lg-1">
               <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up">
                 <i class="bx bx-receipt"></i>
-                <h4>Data for the last 5+ years</h4>
+                <h4>Data for the last 15+ years</h4>
                 <p>
                   Scores and spreads for every game and every team since 2014
                   season.
